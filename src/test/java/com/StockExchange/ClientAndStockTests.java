@@ -12,6 +12,7 @@ import java.util.List;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
+import com.StockExchange.database.StockExchangeHistoryDataHandlerImpl;
 import com.StockExchange.pojo.Client;
 import com.StockExchange.pojo.ClientConcurrentMap;
 import com.StockExchange.pojo.Stock;
@@ -72,6 +73,7 @@ public class ClientAndStockTests {
 	@Test
 	public void createClientHistory() {
 		ClientConcurrentMap ccm = new ClientConcurrentMap();
+		StockExchangeHistoryDataHandlerImpl dataHandler = new StockExchangeHistoryDataHandlerImpl();
 		Stock stock1 = new Stock("stock1", 1, 1);
 		Stock stock2 = new Stock("stock2", 2, 2);
 		Stock stock3 = new Stock("stock3", 3, 3);
@@ -83,14 +85,14 @@ public class ClientAndStockTests {
 		ccm.updateValueIntoMap(cli.getId(), cli);
 		ccm.updateValueIntoMap(cli1.getId(), cli1);
 		
-		ccm.saveCurrentStateAsClientHistoryToFile();
+		dataHandler.saveClientStateToDb(ccm);
 		
 	}
 	
 	@Test
 	public void setUpClientConcurrentMapFromHistory() throws FileNotFoundException {
-		ClientConcurrentMap ccm = new ClientConcurrentMap();
-		ccm.setUpClientMapFromHistoryFile("src/main/resources/ClientHistory.json");
+		StockExchangeHistoryDataHandlerImpl dataHandler = new StockExchangeHistoryDataHandlerImpl();
+		ClientConcurrentMap ccm = dataHandler.getClientHistoryFormDb();
 		
 		assertTrue(ccm.isKeyExists(0));
 		assertTrue(ccm.isKeyExists(1));
