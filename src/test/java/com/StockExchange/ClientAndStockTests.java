@@ -14,7 +14,9 @@ import com.StockExchange.api.dataObjects.StockExchange;
 import com.StockExchange.dataMaps.ClientConcurrentMap;
 import com.StockExchange.database.StockExchangeHistoryDataHandlerImpl;
 import com.StockExchange.pojo.Stock;
+import com.google.gson.Gson;
 import com.jayway.restassured.RestAssured;
+import com.jayway.restassured.response.Response;
 
 public class ClientAndStockTests extends ApiTestingInfra{
 
@@ -39,11 +41,29 @@ public class ClientAndStockTests extends ApiTestingInfra{
 		HashMap<String,String> client = new HashMap<>();
 		client.put("id", "1");
 		
+		Stock stock1 = new Stock("stock1", 1, 1);
+		Stock stock2 = new Stock("stock2", 2, 2);
+		Client cli = createNewClientProtfolio(0, stock1,stock2);
+		Gson gson = new Gson();
 		RestAssured.given()
+		.contentType(APPLICATION_JSON)
+		.body(gson.toJson(cli))
+		.when()
+		.post("/addClient");
+	}
+	
+	@Test
+	public void testGetClientProtfolioValue() {
+		HashMap<String,String> client = new HashMap<>();
+		client.put("id", "1");
+		
+		Response resp = RestAssured.given()
 		.contentType(APPLICATION_JSON)
 		.body(client)
 		.when()
-		.post("/addClient");
+		.post("/getClientProtfolioValue");
+		
+		System.out.println(resp.asString());
 	}
 	
 	@Test
@@ -98,7 +118,7 @@ public class ClientAndStockTests extends ApiTestingInfra{
 		StockExchange stockExchange = dataHandler.initStockExchange();
 		
 		double valueOfStockToTest = stockExchange.getValueOfStock("Grubhub Inc");
-		
+		assertTrue(stockExchange.getClientFromMap(0) != null);
 		assertTrue(98.78 == valueOfStockToTest);
 	}
 }

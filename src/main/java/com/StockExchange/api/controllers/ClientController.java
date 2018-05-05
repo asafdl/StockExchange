@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.StockExchange.api.dataObjects.Client;
 import com.StockExchange.api.dataObjects.StockExchange;
+import com.StockExchange.database.StockExchangeHistoryDataHandlerImpl;
 import com.google.gson.Gson;
 
 @RestController
@@ -22,7 +23,16 @@ public class ClientController {
 	}
 	    
 	@RequestMapping("/getClientProtfolioValue")
-	public double getClientProtfolioValue(@RequestParam(value="clientId",required=true) int id) {   	
-		return 0;
+	public double getClientProtfolioValue(@RequestParam(value="id",required=true) int id) {
+		StockExchangeHistoryDataHandlerImpl dataHandler = new StockExchangeHistoryDataHandlerImpl();
+		try {
+			stockExchange = dataHandler.initStockExchange();
+		}catch(Exception ex) {
+			
+		}
+		
+		Client cli = stockExchange.getClientFromMap(id);
+		
+		return cli.getProtfolioValue();
 	}
 }

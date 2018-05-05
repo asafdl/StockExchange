@@ -1,5 +1,11 @@
+D:\Asafs Folder\Eclipse Workspace\StockExchange\src\main\java\com\StockExchange\database\StockExchangeHistoryDataHandlerImpl.java
 D:\Asafs Folder\Eclipse Workspace\StockExchange\src\main\java\com\StockExchange\pojo\Stock.java
 D:\Asafs Folder\Eclipse Workspace\StockExchange\src\main\java\com\StockExchange\App.java
-D:\Asafs Folder\Eclipse Workspace\StockExchange\src\main\java\com\StockExchange\controllers\ClientController.java
-D:\Asafs Folder\Eclipse Workspace\StockExchange\src\main\java\com\StockExchange\pojo\Client.java
-D:\Asafs Folder\Eclipse Workspace\StockExchange\src\main\java\com\StockExchange\pojo\StockProtfolio.java
+D:\Asafs Folder\Eclipse Workspace\StockExchange\src\main\java\com\StockExchange\dataMaps\ConcurrentHashMapWrapper.java
+D:\Asafs Folder\Eclipse Workspace\StockExchange\src\main\java\com\StockExchange\pojo\StockListDataStructure.java
+D:\Asafs Folder\Eclipse Workspace\StockExchange\src\main\java\com\StockExchange\database\IStockExchangeHistoryDataHandler.java
+D:\Asafs Folder\Eclipse Workspace\StockExchange\src\main\java\com\StockExchange\dataMaps\StockConcurrentMap.java
+D:\Asafs Folder\Eclipse Workspace\StockExchange\src\main\java\com\StockExchange\dataMaps\ClientConcurrentMap.java
+D:\Asafs Folder\Eclipse Workspace\StockExchange\src\main\java\com\StockExchange\api\dataObjects\StockExchange.java
+D:\Asafs Folder\Eclipse Workspace\StockExchange\src\main\java\com\StockExchange\api\controllers\ClientController.java
+D:\Asafs Folder\Eclipse Workspace\StockExchange\src\main\java\com\StockExchange\api\dataObjects\Client.java

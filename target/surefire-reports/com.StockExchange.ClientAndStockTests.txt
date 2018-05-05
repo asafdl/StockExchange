@@ -1,8 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.StockExchange.ClientAndStockTests
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 4.258 s <<< FAILURE! - in com.StockExchange.ClientAndStockTests
-testAPINewClient(com.StockExchange.ClientAndStockTests)  Time elapsed: 3.744 s  <<< ERROR!
-java.net.ConnectException: Connection refused: connect
-	at com.StockExchange.ClientAndStockTests.testAPINewClient(ClientAndStockTests.java:65)
-
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.929 s - in com.StockExchange.ClientAndStockTests
