@@ -1,0 +1,71 @@
+[
+	{
+		"name" : "Hailiang Edu Grp Ads",
+		"price" : 76.70,
+		"amount" : 1
+	},
+	{
+		"name" : "Caredx Inc",
+		"value" : 10.66
+	},
+	{
+		"name" : "Texas Pacific Land Trust ",
+		"price" :  628.13,
+		"amount" : 1
+	},
+	{
+		"name" : "Abiomed Inc",
+		"price" : 349.28,
+		"amount" : 1
+	},
+	{
+		"name" : "Beigene Ltd Ads",
+		"price" : 180.91,
+		"amount" : 1
+	},
+	{
+		"name" : "Inogen Inc",
+		"price" :  169.94,
+		"amount" : 1
+	},
+	{
+		"name" : "Medifast Inc",
+		"price" : 121.46,
+		"amount" : 1
+	},
+	{
+		"name" : "Madrigal Pharmaceuticals Inc",
+		"price" : 117.48,
+		"amount" : 1
+	},
+	{
+		"name" : "Enanta Pharmaceutica",
+		"price" : 100.13,
+		"amount" : 1
+	},
+	{
+		"name" : "Grubhub Inc",
+		"price" : 98.78,
+		"amount" : 1
+	},
+	{
+		"name" : "Autohome Inc",
+		"price" : 93.80,
+		"amount" : 1
+	},
+	{
+		"name" : "51Job Inc",
+		"price" : 93.76,
+		"amount" : 1
+	},
+	{
+		"name" : "Sarepta Therapeutics",
+		"price" : 10.66,
+		"amount" : 1
+	},
+	{
+		"name" : "Argenx Se Ads",
+		"price" : 88.20,
+		"amount" : 1
+	}
+]

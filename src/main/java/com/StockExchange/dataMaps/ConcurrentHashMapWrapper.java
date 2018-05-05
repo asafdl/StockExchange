@@ -1,4 +1,4 @@
-package com.StockExchange.pojo;
+package com.StockExchange.dataMaps;
 
 import java.util.ArrayList;
 import java.util.List;

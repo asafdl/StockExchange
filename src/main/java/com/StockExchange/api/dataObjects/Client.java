@@ -1,6 +1,9 @@
-package com.StockExchange.pojo;
+package com.StockExchange.api.dataObjects;
 
 import java.util.List;
+
+import com.StockExchange.dataMaps.StockConcurrentMap;
+import com.StockExchange.pojo.Stock;
 
 
 public class Client {

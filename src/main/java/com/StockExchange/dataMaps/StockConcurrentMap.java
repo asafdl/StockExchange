@@ -1,9 +1,11 @@
-package com.StockExchange.pojo;
+package com.StockExchange.dataMaps;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.concurrent.ConcurrentHashMap;
+
+import com.StockExchange.pojo.Stock;
 
 public class StockConcurrentMap extends ConcurrentHashMapWrapper<String, Stock>{
 	
